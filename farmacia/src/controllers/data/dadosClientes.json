@@ -1,0 +1,22 @@
+{
+  "Cliente": [
+    {
+      "nome": "Iuri",
+      "endereco": "Rua dos Andrades",
+      "email": "iurisaints@gmail.com",
+      "telefone": "55996840281"
+    },
+    {
+      "nome": "Rafael Bittencourt",
+      "endereco": "Rua da Música, 123",
+      "email": "rbiteca@gmail.com",
+      "telefone": "559996840281"
+    },
+    {
+      "nome": "qwewqe",
+      "endereco": "qwewqe1",
+      "email": "qwewqe@asdasd",
+      "telefone": "123"
+    }
+  ]
+}
