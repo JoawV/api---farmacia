@@ -3,20 +3,16 @@ const server = express();
 const dados = require('./data/dados.json');
 const fs = require('fs')
 
-// função para utilizar o servidor
 server.use(express.json());
 
-// Função para verificar o servidor
 server.listen(3000, () =>{
 console.log("Servidor está funcionando!");
 });
 
-// salvar
 function salvarDados(dados){
     fs.writeFileSync(__dirname + '/data/dados.json', JSON.stringify(dados, null, 2))
 }
 
-//---------------------------MEDICAMENTOS-------------------------------------------
 server.post('/medicamento', (req, res) => {
     const novoMedicamento = req.body
 
@@ -68,8 +64,6 @@ server.delete("/medicamento/:id", (req, res) => {
     return res.status(200).json({mensagem: "Medicamento excluido com sucesso!"})
 })
 
-// ---------------------------------------------------------------------------------
-//--------------------------------CLIENTES-------------------------------------------
 server.post('/cliente', (req, res) => {
     const novoCliente = req.body
 
@@ -120,8 +114,7 @@ server.delete("/cliente/:id", (req, res) => {
     
     return res.status(200).json({mensagem: "Cliente excluido com sucesso!"})
 })
-//--------------------------------------------------------------------------------
-//------------------------------------FORNECEDOR----------------------------------
+
 server.post('/Fornecedor', (req, res) => {
     const novoFornecedor = req.body
 
@@ -170,8 +163,7 @@ server.delete("/Fornecedor/:id", (req, res) => {
     
     return res.status(200).json({mensagem: "Fornecedor excluido com sucesso!"})
 })
-//---------------------------------------------------------------------------
-//---------------------------------VENDA-----------------------------------
+
 server.post('/Venda', (req, res) => {
     const novoVenda = req.body
 
@@ -222,4 +214,3 @@ server.delete("/Venda/:id", (req, res) => {
     
     return res.status(200).json({mensagem: "Venda excluido com sucesso!"})
 })
-//----------------------------FIM----------------------------------

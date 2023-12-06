@@ -1,8 +1,9 @@
 const express = require('express');
 const server = express();
-const dadosClientes = require('./data/dadosClientes.json'); // Novo arquivo para dados de clientes
+const dadosClientes = require('./data/dadosClientes.json');
 const fs = require('fs');
 server.use(express.json());
+
 server.post('/clientes', (req, res) => {
     const novoCliente = req.body;
     if (!novoCliente.nome || !novoCliente.endereco || !novoCliente.email || !novoCliente.telefone) {
@@ -13,9 +14,11 @@ server.post('/clientes', (req, res) => {
         return res.status(201).json({ mensagem: "Novo cliente cadastrado com sucesso!" });
     }
 });
+
 server.get('/clientes', (req, res) => {
     return res.json(dadosClientes.Cliente);
 });
+
 server.put('/clientes/:id', (req, res) => {
     const clienteId = parseInt(req.params.id);
     const atualizarCliente = req.body;
@@ -32,12 +35,14 @@ server.put('/clientes/:id', (req, res) => {
         return res.json({ mensagem: "Cliente atualizado com sucesso!" });
     }
 });
+
 server.delete("/clientes/:id", (req, res) => {
     const clienteId = parseInt(req.params.id);
     dadosClientes.Cliente = dadosClientes.Cliente.filter(c => c.id !== clienteId);
     salvarDadosClientes(dadosClientes);
     return res.status(200).json({ mensagem: "Cliente excluído com sucesso" });
 });
+
 function salvarDadosClientes() {
     fs.writeFileSync(__dirname + '/data/dadosClientes.json', JSON.stringify(dadosClientes, null, 2));
 }
