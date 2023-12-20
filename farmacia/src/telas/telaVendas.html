@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Vendas</title>
+    <link rel="stylesheet" href="../vendas/vendas.css">
+</head>
+<body>
+    <h1>Gerenciamento de Vendas</h1>
+    <h2>Adicionar Venda</h2>
+    <form id="formAdicionarVenda">
+        <label for="idVenda">ID: </label>
+        <input type="text" id="idVenda" name="idVenda" required>
+
+        <label for="dataVenda">Data: </label>
+        <input type="text" id="dataVenda" name="dataVenda" required>
+        
+        <label for="idMedicamentoVenda">ID Medicamento: </label>
+        <input type="text" id="idMedicamentoVenda" name="idMedicamentoVenda" required>
+
+        <label for="idClienteVenda">ID Cliente: </label>
+        <input type="text" id="idClienteVenda" name="idClienteVenda" required>
+    
+        <button type="button" onclick="adicionarVenda()">Adicionar</button>
+    </form>
+
+    <h2>Listar Vendas</h2>
+    <ul id="listaVendas"></ul>
+
+    <script src="../vendas/vendas.js"></script>
+</body>
+</html>

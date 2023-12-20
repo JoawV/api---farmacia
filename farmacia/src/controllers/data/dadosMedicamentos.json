@@ -1,0 +1,17 @@
+{
+    "Medicamento": [
+      {
+        "id": 1,
+        "nome_medicamento": "Paracetamol",
+        "nome_fabricante": "Farmacom",
+        "preco": 10.99,
+        "quantidade": 50,
+        "_links": {
+          "self": { "href": "/medicamentos/1" },
+          "update": { "href": "/medicamentos/1/update" },
+          "delete": { "href": "/medicamentos/1/delete" }
+        }
+      }
+    ]
+  }
+  

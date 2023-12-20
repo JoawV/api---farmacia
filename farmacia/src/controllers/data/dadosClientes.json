@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "nome": "Cliente A",
+  "endereco": "Rua X, 123",
+  "email": "clienteA@email.com",
+  "telefone": "123456789",
+  "_links": {
+    "self": {
+      "href": "/api/clientes/1"
+    },
+    "update": {
+      "href": "/api/clientes/1/atualizar"
+    },
+    "delete": {
+      "href": "/api/clientes/1/excluir"
+    },
+    "collection": {
+      "href": "/api/clientes"
+    }
+  }
+}

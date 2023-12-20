@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "nome": "Fornecedor ABC",
+  "endereco": "Rua XYZ",
+  "email": "fornecedor@abc.com",
+  "_links": {
+    "self": {
+      "href": "/fornecedores/1"
+    },
+    "update": {
+      "href": "/fornecedores/1/update"
+    },
+    "delete": {
+      "href": "/fornecedores/1/delete"
+    }
+  }
+}
